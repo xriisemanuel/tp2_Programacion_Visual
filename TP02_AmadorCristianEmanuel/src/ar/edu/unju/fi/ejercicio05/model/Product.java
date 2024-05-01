@@ -26,9 +26,17 @@ public class Product extends Producto {
 		this.status = status;
 	}
 
+	private String checkstatus() {
+		if (status) {
+			return "Disponible";
+		} else {
+			return "No Disponible";
+		}
+	}
+
 	@Override
 	public String toString() {
-		return "Product [status=" + status + "]";
-	}	
-	
+		return Product.super.toString() + "\nStock: " + checkstatus();
+	}
+
 }

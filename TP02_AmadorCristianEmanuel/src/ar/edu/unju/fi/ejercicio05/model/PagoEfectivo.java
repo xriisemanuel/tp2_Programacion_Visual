@@ -11,6 +11,10 @@ public class PagoEfectivo implements IPago {
 	public PagoEfectivo() {
 	}
 
+	public PagoEfectivo(LocalDate paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
 	public PagoEfectivo(double amountPaid, LocalDate paymentDate) {
 		this.amountPaid = amountPaid;
 		this.paymentDate = paymentDate;
@@ -39,7 +43,7 @@ public class PagoEfectivo implements IPago {
 
 	@Override
 	public void realizarPago(double monto) {
-		this.amountPaid += (this.amountPaid * 10) / 100;
+		this.amountPaid = monto - (monto * 0.1);
 	}
 
 	@Override
