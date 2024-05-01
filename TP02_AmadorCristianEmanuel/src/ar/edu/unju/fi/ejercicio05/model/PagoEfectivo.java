@@ -37,19 +37,13 @@ public class PagoEfectivo implements IPago {
 	}
 
 	@Override
-	public String toString() {
-		return "PagoEfectivo [amountPaid=" + amountPaid + ", paymentDate=" + paymentDate + "]";
-	}
-
-	@Override
 	public void realizarPago(double monto) {
 		this.amountPaid = monto - (monto * 0.1);
 	}
 
 	@Override
 	public void imprimirRecibo() {
-		System.out.println("\nRESUMEN DE PAGO \nFecha de Pago: " + paymentDate + "\nMonto Pagado: $" + 
-				amountPaid);
+		System.out.println("\nRESUMEN DE PAGO \nFecha de Pago: " + paymentDate + "\nMonto Pagado: $" + amountPaid);
 	}
 
 }

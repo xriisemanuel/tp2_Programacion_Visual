@@ -102,7 +102,7 @@ public class Main {
 	}
 
 	private static void submenu() {
-		System.out.println("\n¡Excelente!, ahora eliga un metodo de pago");
+		System.out.println("¡Excelente!, ahora eliga un metodo de pago");
 		System.out.println("1 - Pagar con efectivo");
 		System.out.println("2 - Pagar con tarjeta");
 		System.out.println("Seleccione una opcion: ");
@@ -137,7 +137,6 @@ public class Main {
 	}
 
 	private static void cashPayment(ArrayList<Product> shoppingCar) {
-
 		IPago pay = new PagoEfectivo(LocalDate.now());
 		pay.realizarPago(totalDue(shoppingCar));
 		pay.imprimirRecibo();

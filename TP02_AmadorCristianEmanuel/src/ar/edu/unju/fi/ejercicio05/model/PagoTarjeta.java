@@ -16,7 +16,7 @@ public class PagoTarjeta implements IPago {
 		this.cardNumber = cardNumber;
 		this.paymentDate = paymentDate;
 	}
-	
+
 	public PagoTarjeta(String cardNumber, LocalDate paymentDate, double amountPaid) {
 		this.cardNumber = cardNumber;
 		this.paymentDate = paymentDate;
@@ -48,20 +48,14 @@ public class PagoTarjeta implements IPago {
 	}
 
 	@Override
-	public String toString() {
-		return "PagoTarjeta [cardNumber=" + cardNumber + ", paymentDate=" + paymentDate + ", amountPaid=" + amountPaid
-				+ "]";
-	}
-
-	@Override
 	public void realizarPago(double monto) {
 		this.amountPaid = monto + (monto * 0.15);
 	}
 
 	@Override
 	public void imprimirRecibo() {
-		System.out.println("\nRESUMEN DE PAGO \nNumero de tarjeta: " + cardNumber + 
-				"\nFecha de Pago: " + paymentDate + "\nMonto pagado: $" + amountPaid);
+		System.out.println("\nRESUMEN DE PAGO \nNumero de tarjeta: " + cardNumber + "\nFecha de Pago: " + paymentDate
+				+ "\nMonto pagado: $" + amountPaid);
 	}
 
 }
