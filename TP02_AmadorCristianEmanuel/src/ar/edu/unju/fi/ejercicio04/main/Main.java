@@ -13,7 +13,6 @@ public class Main {
 	public static float f;
 
 	public static void main(String[] args) {
-		
 		ArrayList<Jugador> gamers = new ArrayList<>();
 		Scanner sc = new Scanner(System.in);
 
