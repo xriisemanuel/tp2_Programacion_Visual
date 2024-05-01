@@ -13,8 +13,6 @@ public enum Provincia {
 		this.superficie = superficie;
 	}
 
-	// Las clases enumeradas no deberian tener setters en teoria, por eso no los
-	// agregue
 	public int getPoblacion() {
 		return poblacion;
 	}
