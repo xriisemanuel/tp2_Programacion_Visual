@@ -79,6 +79,7 @@ public class Main {
 				}
 			} catch (Exception e) {
 				System.out.println("Solo debe ingresar caracteres alfanumericos");
+				scanner.nextLine();
 			}
 
 		} while (loop);
@@ -116,6 +117,7 @@ public class Main {
 				}
 			} catch (Exception e) {
 				System.err.println("INGRESE UNICAMENTE VALORES NUMERICOS");
+				s.nextLine();
 			}
 		} while (loop);
 	}
@@ -137,6 +139,7 @@ public class Main {
 
 			} catch (Exception e) {
 				System.err.println("Ingrese, unicamente valores numericos positivos");
+				sc.nextLine();
 			}
 		} while (loop);
 	}
@@ -163,6 +166,7 @@ public class Main {
 
 			} catch (Exception e) {
 				System.err.println("SOLO SE PERMITEN VALORES NUMERICOS ENTEROS");
+				sc.nextLine();
 			}
 		} while (loop);
 	}
