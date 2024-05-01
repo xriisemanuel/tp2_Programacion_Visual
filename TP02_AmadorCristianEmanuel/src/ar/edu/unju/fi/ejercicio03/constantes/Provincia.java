@@ -13,7 +13,8 @@ public enum Provincia {
 		this.superficie = superficie;
 	}
 
-	// only getter can be created on "enum" classes
+	// Las clases enumeradas no deberian tener setters en teoria, por eso no los
+	// agregue
 	public int getPoblacion() {
 		return poblacion;
 	}
@@ -25,5 +26,5 @@ public enum Provincia {
 	public double calcularDensidadPoblacional() {
 		return (double) poblacion / superficie;
 	}
-	
+
 }
