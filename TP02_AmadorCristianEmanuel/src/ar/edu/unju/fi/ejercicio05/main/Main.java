@@ -137,17 +137,21 @@ public class Main {
 	}
 
 	private static void cashPayment(ArrayList<Product> shoppingCar) {
-		IPago pay = new PagoEfectivo(LocalDate.now());
+		PagoEfectivo pay = new PagoEfectivo();
+		//IPago pay = new PagoEfectivo(LocalDate.now()); (Fabri)
 		pay.realizarPago(totalDue(shoppingCar));
 		pay.imprimirRecibo();
 	}
 
 	private static void cardPayment(ArrayList<Product> shoppingCar) {
 		PagoTarjeta aux = new PagoTarjeta();
-		checkCard(aux);
-		IPago p = new PagoTarjeta(aux.getCardNumber(), LocalDate.now());
+		checkCard(aux); //optimizar_mas!
+		aux = new PagoTarjeta(aux.getCardNumber(), LocalDate.now());
+		aux.realizarPago(totalDue(shoppingCar));
+		aux.imprimirRecibo();
+		/*p = new PagoTarjeta(aux.getCardNumber(), LocalDate.now());
 		p.realizarPago(totalDue(shoppingCar));
-		p.imprimirRecibo();
+		p.imprimirRecibo();*/
 	}
 
 	private static void checkPaymentMethod(ArrayList<Product> shoppingCar) {
