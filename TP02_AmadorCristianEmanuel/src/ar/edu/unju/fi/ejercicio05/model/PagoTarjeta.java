@@ -12,8 +12,7 @@ public class PagoTarjeta implements IPago {
 	public PagoTarjeta() {
 	}
 
-	public PagoTarjeta(String cardNumber, LocalDate paymentDate) {
-		this.cardNumber = cardNumber;
+	public PagoTarjeta(LocalDate paymentDate) {
 		this.paymentDate = paymentDate;
 	}
 
