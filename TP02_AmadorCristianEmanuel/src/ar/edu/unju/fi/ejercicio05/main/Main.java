@@ -21,14 +21,16 @@ public class Main {
 		ArrayList<Product> products = new ArrayList<>();
 		ArrayList<Product> shoppingCart = new ArrayList<>();
 		Product p1 = new Product("AAA", "IPHONE", 1500, MadeIn.BRASIL, Category.TELEFONIA, true);
-		Product p2 = new Product("BBB", "LENOVO", 5999, MadeIn.CHINA, Category.INFORMATICA, true);
-		Product p3 = new Product("CCC", "TV70", 3600, MadeIn.ARGENTINA, Category.ELECTROHOGAR, false);
+		Product p2 = new Product("BBB", "LENOVO", 5999, MadeIn.CHINA, Category.INFORMATICA, false);
+		Product p3 = new Product("CCC", "TV70", 3600, MadeIn.ARGENTINA, Category.ELECTROHOGAR, true);
 		Product p4 = new Product("DDD", "PICADORA", 333, MadeIn.URUGUAY, Category.HERRAMIENTAS, false);
+		Product p5 = new Product("EEE", "SAMSUNG", 1400, MadeIn.CHINA, Category.TELEFONIA, true);
 		products.add(p1);
 		products.add(p2);
 		products.add(p3);
 		products.add(p4);
-
+		products.add(p5);
+		
 		do {
 			menu();
 			try {
@@ -51,7 +53,6 @@ public class Main {
 				sc.nextLine();
 			}
 		} while (option != 3);
-
 	}
 
 	private static void checkCode(String code, ArrayList<Product> products, ArrayList<Product> shoppingCar) {
