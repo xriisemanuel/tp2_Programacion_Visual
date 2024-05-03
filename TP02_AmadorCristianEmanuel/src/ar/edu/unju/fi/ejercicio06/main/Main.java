@@ -17,10 +17,10 @@ public class Main {
 	public static void createDomesticPet() {
 		// Pet: Garfield
 		FelinoDomestico garfield = new FelinoDomestico("Garfield", (byte) 45, 12f);
-		// FelinoDomestico garfield = null; //objeto sin datos para testear
+		// FelinoDomestico garfield = null;
 
-		// definicion de la expresion lambda que define el convertidor de
-		// FelinoDomestico a FelinoDalvaje
+		// definition of lambda expression that define the convert between
+		// [FelinoDomestico a FelinoDalvaje]
 
 		IConverter<FelinoDomestico, FelinoSalvaje> converter = x -> {
 			if (IConverter.isNotNull(x)) {
@@ -30,7 +30,7 @@ public class Main {
 			}
 		};
 
-		// conversion process
+		// conversion process: [DomesticPet to WildPet]
 		FelinoSalvaje felino1 = converter.convert(garfield);
 
 		// only show details when object is not null
@@ -54,6 +54,7 @@ public class Main {
 			}
 		};
 
+		//conversion process: [WildPet to DomesticPet]
 		FelinoDomestico felino2 = converter1.convert(tanner);
 
 		if (felino2 == null) {
