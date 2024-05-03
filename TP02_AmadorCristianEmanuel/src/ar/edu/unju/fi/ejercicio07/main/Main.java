@@ -60,7 +60,7 @@ public class Main {
 				System.err.println("Ingrese solo un numero por favor");
 			}
 		} while (option != 7);
-
+		sc.close();
 	}
 
 	private static List<Product> capitalNames(ArrayList<Product> products) {
