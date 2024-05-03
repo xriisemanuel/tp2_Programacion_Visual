@@ -37,7 +37,8 @@ public class Main {
 				case 3:
 					// products.removeAll(products);
 					// products.addAll(increasePrices(products));
-					System.out.println(increasePrices(products));
+					products = new ArrayList<>(increasePrices(products));
+					products.forEach(p -> System.out.println(p));
 					break;
 				case 4:
 					System.out.println(electrohogar(products));
@@ -108,21 +109,21 @@ public class Main {
 	}
 
 	private static void loadProducts(ArrayList<Product> products) {
-		Product p1 = new Product("AAA", "IPHONE", 1500, MadeIn.BRASIL, Category.TELEFONIA, true);
-		Product p2 = new Product("BBB", "LENOVO", 5999, MadeIn.CHINA, Category.INFORMATICA, false);
-		Product p3 = new Product("CCC", "TV70", 3600, MadeIn.ARGENTINA, Category.ELECTROHOGAR, true);
-		Product p4 = new Product("DDD", "PICADORA", 333, MadeIn.URUGUAY, Category.HERRAMIENTAS, false);
-		Product p5 = new Product("EEE", "SAMSUNG", 1400, MadeIn.CHINA, Category.TELEFONIA, true);
-		Product p6 = new Product("FFF", "SONY", 2000, MadeIn.BRASIL, Category.TELEFONIA, true);
-		Product p7 = new Product("GGG", "HP", 799, MadeIn.CHINA, Category.INFORMATICA, false);
-		Product p8 = new Product("HHH", "LG", 3500, MadeIn.ARGENTINA, Category.ELECTROHOGAR, true);
-		Product p9 = new Product("III", "PHILIPS", 120, MadeIn.URUGUAY, Category.ELECTROHOGAR, false);
-		Product p10 = new Product("JJJ", "MOTOROLA", 899, MadeIn.BRASIL, Category.TELEFONIA, true);
-		Product p11 = new Product("KKK", "DELL", 2500, MadeIn.CHINA, Category.INFORMATICA, true);
-		Product p12 = new Product("LLL", "TOYOTA", 30000, MadeIn.ARGENTINA, Category.HERRAMIENTAS, true);
-		Product p13 = new Product("MMM", "FIAT", 15000, MadeIn.URUGUAY, Category.HERRAMIENTAS, true);
-		Product p14 = new Product("NNN", "NIKE", 120, MadeIn.BRASIL, Category.HERRAMIENTAS, false);
-		Product p15 = new Product("OOO", "ADIDAS", 80, MadeIn.CHINA, Category.INFORMATICA, false);
+		Product p1 = new Product("AAA", "Iphone", 1500, MadeIn.BRASIL, Category.TELEFONIA, true);
+		Product p2 = new Product("BBB", "Lenovo", 5999, MadeIn.CHINA, Category.INFORMATICA, false);
+		Product p3 = new Product("CCC", "Tv70", 3600, MadeIn.ARGENTINA, Category.ELECTROHOGAR, true);
+		Product p4 = new Product("DDD", "Picadora", 333, MadeIn.URUGUAY, Category.HERRAMIENTAS, false);
+		Product p5 = new Product("EEE", "Samsung", 1400, MadeIn.CHINA, Category.TELEFONIA, true);
+		Product p6 = new Product("FFF", "Sony", 2000, MadeIn.BRASIL, Category.TELEFONIA, true);
+		Product p7 = new Product("GGG", "Hp", 799, MadeIn.CHINA, Category.INFORMATICA, false);
+		Product p8 = new Product("HHH", "Lg", 3500, MadeIn.ARGENTINA, Category.ELECTROHOGAR, true);
+		Product p9 = new Product("III", "Philiphs", 120, MadeIn.URUGUAY, Category.ELECTROHOGAR, false);
+		Product p10 = new Product("JJJ", "Lumia", 899, MadeIn.BRASIL, Category.TELEFONIA, true);
+		Product p11 = new Product("KKK", "Microsoft", 2500, MadeIn.CHINA, Category.INFORMATICA, true);
+		Product p12 = new Product("LLL", "Amoladora", 1888, MadeIn.ARGENTINA, Category.HERRAMIENTAS, true);
+		Product p13 = new Product("MMM", "KitDestornillador", 999, MadeIn.URUGUAY, Category.HERRAMIENTAS, true);
+		Product p14 = new Product("NNN", "KitDental", 120, MadeIn.BRASIL, Category.HERRAMIENTAS, false);
+		Product p15 = new Product("OOO", "SmartTransparente", 8000, MadeIn.CHINA, Category.INFORMATICA, false);
 		products.add(p1);
 		products.add(p2);
 		products.add(p3);
