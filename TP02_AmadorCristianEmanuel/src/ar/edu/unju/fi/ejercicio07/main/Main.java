@@ -80,9 +80,7 @@ public class Main {
 	}
 
 	private static List<Product> electrohogar(ArrayList<Product> products) {
-		Product aux = new Product();
-		aux.setCat(Category.ELECTROHOGAR);
-		Predicate<Product> condicion = p -> p.isStatus() && p.getCat().equals(aux.getCat());
+		Predicate<Product> condicion = p -> p.isStatus() && p.getCat().equals(Category.ELECTROHOGAR);
 		return products.stream().filter(condicion).collect(Collectors.toList());
 	}
 
